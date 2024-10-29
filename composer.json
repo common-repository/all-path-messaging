@@ -1,0 +1,35 @@
+{
+    "name": "souptik/all-path-messaging",
+    "description": "Limitless Communication: All-in-One, super scalable, messaging Solution for WordPress.",
+    "require": {
+        "utopia-php/messaging": "^0.10.0",
+        "aws/aws-sdk-php": "^3.324"
+    },
+    "require-dev": {
+        "roots/wordpress": "6.6.2",
+        "squizlabs/php_codesniffer": "*",
+        "travelopia/wordpress-coding-standards": "*",
+        "phpstan/phpstan": "^1.10.50"
+    },
+    "scripts": {
+        "static-analysis": "phpstan analyse -c phpstan.neon --memory-limit=512M",
+        "lint": "phpcs"
+    },
+    "autoload": {
+        "psr-4": {
+            "Souptik\\WPMessaging\\": "inc/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Souptik Datta",
+            "email": "souptikdatta2001@gmail.com"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "roots/wordpress-core-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
